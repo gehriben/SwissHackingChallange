@@ -1,0 +1,61 @@
+{
+"class_name": "Sequential", 
+"config": {
+	"layers": [{
+		"class_name": "Flatten", 
+		"config": {
+			"dtype": "float32", 
+			"batch_input_shape": [null, 42, 186], 
+			"trainable": true, 
+			"name": "flatten_1", 
+			"data_format": "channels_last"
+			}
+		}, 
+		{
+		"class_name": "Dense", 
+		"config": {
+			"kernel_initializer": {
+				"class_name": "VarianceScaling", 
+				"config": {
+					"distribution": "uniform", 
+					"scale": 1.0, 
+					"seed": null, 
+					"mode": "fan_avg"
+					}
+				}, 
+			"name": "dense_1", 
+			"kernel_constraint": null, 
+			"bias_regularizer": null, 
+			"bias_constraint": null, 
+			"activation": "sigmoid", 
+			"trainable": true, 
+			"kernel_regularizer": null, 
+			"bias_initializer": {
+				"class_name": "Zeros", 
+				"config": {}
+				}, 
+			"units": 1, 
+			"use_bias": true, 
+			"activity_regularizer": null
+			}
+		}], 		
+	"name": "sequential_1"
+	}
+}
+
+
+{
+	"metrics": [], 
+	"loss": "mse", 
+	"optimizer_config": {
+		"class_name": "RMSprop", 
+		"config": {
+			"epsilon": 1e-07, 
+			"lr": 0.0010000000474974513, 
+			"rho": 0.8999999761581421, 
+			"decay": 0.0
+			}
+		}, 
+	"loss_weights": null, 
+	"sample_weight_mode": null
+}
